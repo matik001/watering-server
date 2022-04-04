@@ -1,0 +1,10 @@
+.idea/
+.env
+node_modules/
+build/
+tmp/
+temp/
+sessions/*
+images/*
+dist
+.envDev
