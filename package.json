@@ -12,7 +12,7 @@
     "fast": "nodemon src/app.ts",
     "start": "nodemon --watch src/**/* -e ts,json --exec node --inspect -r ts-node/register src/app.ts",
     "build": "tsc",
-    "postinstall": "npm run build && npm run syncDb"
+    "postinstall": "npm run build"
   },
   "engines": {
     "node": "16.11.1"
