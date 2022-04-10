@@ -25,8 +25,8 @@ export const AppDataSource = new DataSource({
 
 AppDataSource.initialize()
     .then(async () => {
-        if(ENV_KEYS.IS_PRODUCTION)
-            await AppDataSource.runMigrations();
+        // if(ENV_KEYS.IS_PRODUCTION)
+        //     await AppDataSource.runMigrations();
         console.log("Data Source has been initialized!")
     })
     .catch((err) => {
