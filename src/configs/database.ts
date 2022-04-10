@@ -5,6 +5,7 @@ import ENV_KEYS from "./envKeys";
 
 
 import { DataSource } from "typeorm"
+import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
 
 export const AppDataSource = new DataSource({
     type: ENV_KEYS.TYPEORM_CONNECTION,
@@ -21,7 +22,8 @@ export const AppDataSource = new DataSource({
     ], 
     synchronize: false,
     logging: false,
-})
+    ssl: true
+} as PostgresConnectionOptions)
 
 AppDataSource.initialize()
     .then(async () => {
