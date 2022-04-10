@@ -14,7 +14,7 @@
     "build": "tsc",
     "runmig-heroku": "npm run typeorm migration:run -- -d ./src/configs/database.ts",
     "heroku-prebuild": "npm install",
-    "postinstall": "npm run build && npm run runmig"
+    "postinstall": "npm run build && npm run runmig-heroku"
   },
   "engines": {
     "node": "16.11.1"
