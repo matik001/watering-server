@@ -12,7 +12,8 @@
     "fast": "nodemon src/app.ts",
     "start": "nodemon --watch src/**/* -e ts,json --exec node --inspect -r ts-node/register src/app.ts",
     "build": "tsc",
-    "postinstall": "npm run build && npm run runmig"
+    "runmig-heroku": "npm run typeorm migration:run -d ./src/configs/database.ts",
+    "postinstall": "npm run build && npm run runmig-heroku"
   },
   "engines": {
     "node": "16.11.1"
