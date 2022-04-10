@@ -22,7 +22,7 @@ export const AppDataSource = new DataSource({
     ], 
     synchronize: false,
     logging: false,
-    ssl: true
+    ssl: ENV_KEYS.TYPEORM_SSL
 } as PostgresConnectionOptions)
 
 AppDataSource.initialize()
