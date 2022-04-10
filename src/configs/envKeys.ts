@@ -11,7 +11,7 @@ const ENV_KEYS = {
     TYPEORM_PASSWORD: process.env['TYPEORM_PASSWORD']!,
     TYPEORM_DATABASE: process.env['TYPEORM_DATABASE']!,
     TYPEORM_PORT: parseInt(process.env['TYPEORM_PORT']!),
-    TYPEORM_SSL: parseInt(process.env['TYPEORM_SSL']!),
+    TYPEORM_SSL: !!parseInt(process.env['TYPEORM_SSL']!),
 }
 
 
